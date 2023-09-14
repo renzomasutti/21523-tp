@@ -3,8 +3,7 @@ const Publicacion = require('../models/Publicaciones');
 const ctrl = {}
 
 ctrl.newPost = async (req, res) => {
-    // const { titulo, detalle, url_imagen, fecha_publicacion } = req.body;
-
+    
     try {
         const publicacion = await Publicacion.create(req.body);
         
