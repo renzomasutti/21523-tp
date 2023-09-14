@@ -5,35 +5,31 @@
 
     <%-include("partials/navbar") %>
 
-            <div class="row">
-                <div class="col">
-                    <h1 class="text-center mt-4 mb-4">Agregar Post</h1>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-4 mx-auto">
-                    <form action="#" id="form-nuevo">
-                        <div class="mb-3">
-                            <input type="text" id="titulo" placeholder="Encabezado noticia" class="form-control">
+            
+            <div class="form-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 mx-auto">
+                            <div class="form-container">
+                                <form class="form-horizontal" action="#" id="form-nuevo">
+                                    <div class="heading mb-4">Nuevo Post</div>
+                                    <div class="form-group">
+                                        <input class="form-control" type="Name" id="titulo" placeholder="Encabezado noticia">
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea class="form-control" id="detalle" placeholder="Cuerpo noticia" rows="6"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" id="url_imagen" placeholder="URL foto descriptiva">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="date" id="fecha_publicacion" class="form-control">
+                                    </div>
+                                    <button type="submit" class="btn btn-default mt-3"><i class="fa-solid fa-arrow-right"></i></button>
+                                </form>
+                            </div>
                         </div>
-                       
-                        <div class="form-label mb-3">
-                            <textarea class="form-control" placeholder="Cuerpo noticia" rows="6"></textarea>                           
-                        </div>
-
-                        <div class="mb-3">
-                            <input type="text" id="url_imagen" placeholder="URL foto descriptiva" class="form-control">
-                        </div>
-                        
-                        <div class="mb-3">
-                            <input type="date" id="fecha_publicacion" class="form-control">
-                        </div>
-
-                        <button type="submit" class="btn btn-sm btn-primary">
-                            Guardar
-                        </button>
-                    </form>
+                    </div>
                 </div>
             </div>
 

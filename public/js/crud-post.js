@@ -33,12 +33,12 @@ export const mostrarDatosPublicaciones = (publicaciones, elemento) => {
     let registros = '';
     publicaciones.forEach(pub => {
         registros += `
-            <section class="d-flex gap-2">
+            <section class="d-flex gap-2 post">
                 <img src="${pub.url_imagen}" class="rounded" height="200" width="200">
                 <div class="d-flex flex-column justify-content-between">
-                    <h4>${pub.titulo}</h4>
-                    <p>${pub.detalle}</p>
-                    <p>${pub.fecha_publicacion}</p>
+                    <h4 class="encabezado">${pub.titulo}</h4>
+                    <p class="pnoticia">${pub.detalle}</p>
+                    <p class="pfecha">${pub.fecha_publicacion}</p>
                 </div>
             </section>
         `
