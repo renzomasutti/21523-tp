@@ -38,6 +38,7 @@ export const mostrarDatosPublicaciones = (publicaciones, elemento) => {
                 <div class="d-flex flex-column justify-content-between">
                     <h4 class="encabezado">${pub.titulo}</h4>
                     <p class="pnoticia">${pub.detalle}</p>
+                    <p class="pautor">${pub.autor}</p>
                     <p class="pfecha">${pub.fecha_publicacion}</p>
                 </div>
             </section>

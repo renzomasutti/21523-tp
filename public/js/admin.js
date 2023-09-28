@@ -11,6 +11,7 @@ formNuevaPub.addEventListener('submit', async (e) => {
         titulo: document.querySelector('#titulo').value,
         detalle: document.querySelector('#detalle').value,
         url_imagen: document.querySelector('#url_imagen').value,
+        autor: document.querySelector('#autor').value,
         fecha_publicacion: document.querySelector('#fecha_publicacion').value,
     }
     const respuesta = await crearPublicaciones(data)
