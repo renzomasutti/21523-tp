@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-09-2023 a las 22:57:30
+-- Tiempo de generación: 28-09-2023 a las 19:37:07
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.0.28
 
@@ -32,6 +32,7 @@ CREATE TABLE `publicaciones` (
   `titulo` varchar(255) NOT NULL,
   `detalle` text NOT NULL,
   `url_imagen` varchar(255) NOT NULL,
+  `autor` varchar(255) NOT NULL,
   `fecha_publicacion` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
@@ -39,10 +40,11 @@ CREATE TABLE `publicaciones` (
 -- Volcado de datos para la tabla `publicaciones`
 --
 
-INSERT INTO `publicaciones` (`id`, `titulo`, `detalle`, `url_imagen`, `fecha_publicacion`) VALUES
-(7, 'Lionel Messi y Julian Alvarez nominados a los premios The Best', 'Se dio a conocer las nominados para el premio que entrega FIFA. Hay argentinos: también un hincha de Colón. Se puede dejar el voto.', 'https://www.ole.com.ar/images/2023/09/14/VHx_T86U6_1290x760__1.jpg', '2023-09-14'),
-(8, '¿Por qué Pep Guardiola posó con la camiseta de Boca?', 'El DT del City se juntó con uno de los candidatos a presidente en las elecciones del Xeneize. Mirá...', 'https://www.ole.com.ar/images/2023/09/14/36YP3FJ3C_1290x760__1.jpg', '2023-09-12'),
-(9, 'Francia derrota a Uruguay, que le hace partido el Mundial de rugby', 'Los Teros anotaron el primer try en Lille y después le anularon otro, los franceses ganan pero no les sobra nada.', 'https://www.ole.com.ar/images/2023/09/14/ieHd1CpIU_1290x760__1.jpg', '2023-09-11');
+INSERT INTO `publicaciones` (`id`, `titulo`, `detalle`, `url_imagen`, `autor`, `fecha_publicacion`) VALUES
+(7, 'Lionel Messi y Julian Alvarez nominados a los premios The Best', 'Se dio a conocer las nominados para el premio que entrega FIFA. Hay argentinos: también un hincha de Colón. Se puede dejar el voto.', 'https://www.ole.com.ar/images/2023/09/14/VHx_T86U6_1290x760__1.jpg', '', '2023-09-14'),
+(8, '¿Por qué Pep Guardiola posó con la camiseta de Boca?', 'El DT del City se juntó con uno de los candidatos a presidente en las elecciones del Xeneize. Mirá...', 'https://www.ole.com.ar/images/2023/09/14/36YP3FJ3C_1290x760__1.jpg', '', '2023-09-12'),
+(9, 'Francia derrota a Uruguay, que le hace partido el Mundial de rugby', 'Los Teros anotaron el primer try en Lille y después le anularon otro, los franceses ganan pero no les sobra nada.', 'https://www.ole.com.ar/images/2023/09/14/ieHd1CpIU_1290x760__1.jpg', '', '2023-09-11'),
+(11, 'Prueba titulo con autor', 'Cuerpo con autor', 'https://www.alquiblaweb.com/wp-content/uploads/2013/01/autor.jpg', 'Firma autor', '2023-09-12');
 
 --
 -- Índices para tablas volcadas
@@ -62,7 +64,7 @@ ALTER TABLE `publicaciones`
 -- AUTO_INCREMENT de la tabla `publicaciones`
 --
 ALTER TABLE `publicaciones`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
